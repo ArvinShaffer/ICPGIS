@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tabTriangle">
     <property name="accessibleName">
@@ -37,8 +37,8 @@
       <rect>
        <x>0</x>
        <y>10</y>
-       <width>581</width>
-       <height>421</height>
+       <width>591</width>
+       <height>431</height>
       </rect>
      </property>
     </widget>
@@ -54,7 +54,7 @@
   <customwidget>
    <class>GLTriangle</class>
    <extends>QOpenGLWidget</extends>
-   <header location="global">GLTriangle.h</header>
+   <header>GLTriangle.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

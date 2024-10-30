@@ -2,8 +2,10 @@ QT       += core gui widgets
 
 greaterThan(QT_MAJOR_VERSION, 5){
 QT += opengl
-QT += openglwidgets
+#QT += openglwidgets
 }
+
+LIBS += -lOpengl32 -lgdi32
 CONFIG += c++11
 CONFIG += utf8_source
 
@@ -18,16 +20,19 @@ DEFINES += NOMINMAX
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ICPGLWidget.cpp \
     main.cpp \
     ICPGIS.cpp
 
 HEADERS += \
-    ICPGIS.h
+    ICPGIS.h \
+    ICPGLContext.hpp \
+    ICPGLWidget.h \
+    ICPPlatform.hpp
 
 FORMS += \
     ICPGIS.ui
 
-
-include($$PWD/TheBasic/TheBasic.pri)
-INCLUDEPATH += $$PWD/TheBasic
+INCLUDEPATH += $$PWD/libs/glew/include
+LIBS += -L$$PWD/libs/glew/lib/Release/x64 -lglew32
 
